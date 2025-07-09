@@ -3,418 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikolay Bielskykh - Senior Product & CX Manager</title>
+    <title>Nikolay Bielskykh – Senior Product & CX Manager</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #f8f9fa;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 2px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 50px;
-            text-align: center;
-        }
-        
-        .name {
-            font-size: 2.8em;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.02em;
-        }
-        
-        .title {
-            font-size: 1.1em;
-            font-weight: 400;
-            opacity: 0.85;
-            margin-bottom: 30px;
-            letter-spacing: 0.3px;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            font-size: 0.95em;
-            font-weight: 400;
-        }
-        
-        .contact-item {
-            opacity: 0.9;
-            transition: opacity 0.2s ease;
-        }
-        
-        .contact-item:hover {
-            opacity: 1;
-        }
-        
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.2s ease;
-        }
-        
-        .contact-item a:hover {
-            border-bottom: 1px solid white;
-        }
-        
-        .content {
-            padding: 50px;
-        }
-        
-        .section {
-            margin-bottom: 50px;
-        }
-        
-        .section:last-child {
-            margin-bottom: 0;
-        }
-        
-        .section-title {
-            font-size: 1.3em;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 25px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e0e0e0;
-            letter-spacing: -0.01em;
-        }
-        
-        .summary {
-            font-size: 1.05em;
-            line-height: 1.7;
-            color: #333;
-            font-weight: 400;
-        }
-        
-        .job {
-            margin-bottom: 35px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .job:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-        
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .job-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #1a1a1a;
-            letter-spacing: -0.01em;
-        }
-        
-        .company {
-            font-weight: 500;
-            color: #666;
-            margin-top: 3px;
-            font-size: 0.95em;
-        }
-        
-        .period {
-            font-size: 0.9em;
-            color: #888;
-            font-weight: 400;
-            white-space: nowrap;
-            margin-top: 2px;
-        }
-        
-        .achievements {
-            list-style: none;
-            margin-top: 15px;
-        }
-        
-        .achievements li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-            color: #444;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-        
-        .achievements li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #666;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        
-        .languages {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .language {
-            background: #f8f9fa;
-            color: #333;
-            padding: 12px 18px;
-            border-radius: 2px;
-            font-weight: 500;
-            font-size: 0.9em;
-            border: 1px solid #e0e0e0;
-            transition: all 0.2s ease;
-        }
-        
-        .language:hover {
-            background: #f0f0f0;
-            border-color: #d0d0d0;
-        }
-        
-        .references {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .reference {
-            background: #fafafa;
-            padding: 25px;
-            border-radius: 2px;
-            border-left: 3px solid #1a1a1a;
-        }
-        
-        .reference-name {
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 5px;
-            font-size: 1.05em;
-        }
-        
-        .reference-title {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-        
-        .reference-link {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-size: 0.9em;
-            border-bottom: 1px solid #ccc;
-            transition: border-bottom 0.2s ease;
-            font-weight: 500;
-        }
-        
-        .reference-link:hover {
-            border-bottom: 1px solid #1a1a1a;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-            
-            .container {
-                border-radius: 0;
-            }
-            
-            .header {
-                padding: 40px 30px;
-            }
-            
-            .name {
-                font-size: 2.2em;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 12px;
-            }
-            
-            .content {
-                padding: 40px 30px;
-            }
-            
-            .job-header {
-                flex-direction: column;
-                gap: 8px;
-            }
-            
-            .period {
-                white-space: normal;
-            }
-            
-            .languages {
-                justify-content: flex-start;
-            }
-            
-            .references {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .content {
-                padding: 30px 20px;
-            }
-            
-            .name {
-                font-size: 1.8em;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1a1a1a;background:#f8f9fa;min-height:100vh;padding:40px 20px}
+        .container{max-width:800px;margin:0 auto;background:#fff;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,.08);overflow:hidden}
+        .header{background:#1a1a1a;color:#fff;padding:60px 50px;text-align:center}
+        .name{font-size:2.8em;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
+        .title{font-size:1.1em;font-weight:400;opacity:.85;margin-bottom:30px;letter-spacing:.3px}
+        .contact-info{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;font-size:.95em;font-weight:400}
+        .contact-item{opacity:.9;transition:opacity .2s ease}
+        .contact-item:hover{opacity:1}
+        .contact-item a{color:#fff;text-decoration:none;border-bottom:1px solid transparent;transition:border-bottom .2s ease}
+        .contact-item a:hover{border-bottom:1px solid #fff}
+        .content{padding:50px}
+        .section{margin-bottom:50px}
+        .section:last-child{margin-bottom:0}
+        .section-title{font-size:1.3em;font-weight:600;color:#1a1a1a;margin-bottom:25px;padding-bottom:8px;border-bottom:1px solid #e0e0e0;letter-spacing:-.01em}
+        .summary{font-size:1.05em;line-height:1.7;color:#333;font-weight:400}
+        .job{margin-bottom:35px;padding-bottom:30px;border-bottom:1px solid #f0f0f0}
+        .job:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+        .job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px}
+        .job-title{font-size:1.1em;font-weight:600;color:#1a1a1a;letter-spacing:-.01em}
+        .company{font-weight:500;color:#666;margin-top:3px;font-size:.95em}
+        .period{font-size:.9em;color:#888;font-weight:400;white-space:nowrap;margin-top:2px}
+        .achievements,.skills-list{list-style:none;margin-top:15px}
+        .achievements li,.skills-list li{margin-bottom:8px;padding-left:20px;position:relative;color:#444;font-size:.95em;line-height:1.5}
+        .achievements li::before,.skills-list li::before{content:'•';position:absolute;left:0;color:#666;font-weight:700;font-size:1.2em}
+        .references{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+        .reference{background:#fafafa;padding:25px;border-radius:2px;border-left:3px solid #1a1a1a}
+        .reference-name{font-weight:600;color:#1a1a1a;margin-bottom:5px;font-size:1.05em}
+        .reference-title{color:#666;font-size:.9em;margin-bottom:12px;line-height:1.4}
+        .reference-link{color:#1a1a1a;text-decoration:none;font-size:.9em;border-bottom:1px solid #ccc;transition:border-bottom .2s ease;font-weight:500}
+        .reference-link:hover{border-bottom:1px solid #1a1a1a}
+        @media(max-width:768px){body{padding:20px 10px}.container{border-radius:0}.header{padding:40px 30px}.name{font-size:2.2em}.contact-info{flex-direction:column;gap:12px}.content{padding:40px 30px}.job-header{flex-direction:column;gap:8px}.period{white-space:normal}.references{grid-template-columns:1fr}}
+        @media(max-width:480px){.header{padding:30px 20px}.content{padding:30px 20px}.name{font-size:1.8em}}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1 class="name">NIKOLAY BIELSKYKH</h1>
-            <div class="title">Senior Product & CX Manager</div>
+            <div class="title">Senior Product &amp; CX Manager</div>
             <div class="contact-info">
                 <div class="contact-item">Kyiv, Ukraine</div>
-                <div class="contact-item"><a href="tel:+380504766407">+38 (050) 476-64-07</a></div>
+                <div class="contact-item"><a href="tel:+380504766407">+38 (050) 476‑64‑07</a></div>
                 <div class="contact-item"><a href="mailto:nikolay.belskykh@gmail.com">nikolay.belskykh@gmail.com</a></div>
-                <div class="contact-item"><a href="https://t.me/empr10" target="_blank">Telegram: @empr10</a></div>
+                <div class="contact-item"><a href="https://t.me/empr10" target="_blank" rel="noopener">Telegram: @empr10</a></div>
             </div>
         </div>
 
         <div class="content">
+            <!-- Professional Summary -->
             <div class="section">
-                <h2 class="section-title">Professional Summary</h2>
+                <h2 class="section-title">Summary</h2>
                 <div class="summary">
-                    Product and operations leader with 6 years in product management and 7 years in project/operational roles. Launched cross-platform applications, managed a 170-person CX organisation, and built data-driven, user-focused processes.
+                    Product and operations leader with 6 years in product management and 7 years in project/operational roles. Launched cross‑platform applications, managed a 170‑person CX organisation, and built data‑driven, user‑focused processes.
                 </div>
             </div>
 
+            <!-- Skills -->
             <div class="section">
-                <h2 class="section-title">Professional Experience</h2>
-                
+                <h2 class="section-title">Skills</h2>
+                <ul class="skills-list">
+                    <li>AI Coding Agents: Windsurf, Cursor, v0, Claude Code – rapid prototyping of lightweight apps</li>
+                    <li>Agent Orchestration: building multi‑agent workflows in n8n for complex tasks</li>
+                    <li>Game Design: concept creation, economy &amp; balance modelling, monetisation design, gamification</li>
+                    <li>Analytics &amp; Visualisation: Tableau, Amplitude, Firebase</li>
+                    <li>Version Control &amp; CI/CD: Git workflow, building and packaging releases for App Store &amp; Google Play</li>
+                </ul>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+
+                <!-- Tentens -->
                 <div class="job">
                     <div class="job-header">
                         <div>
                             <div class="job-title">HEAD OF CUSTOMER EXPERIENCE</div>
                             <div class="company">Tentens</div>
                         </div>
-                        <div class="period">Nov 2024 – Mar 2025</div>
+                        <div class="period">Nov 2024 – Mar 2025</div>
                     </div>
                     <ul class="achievements">
-                        <li>Managed three operational departments (Support, Moderation, Premium Account) — 170 staff.</li>
-                        <li>Created a unified CX vision, merged technical backlogs, and set up an insight-sharing workflow.</li>
+                        <li>Managed three operational departments (Support, Moderation, Premium Account) – 170 staff.</li>
+                        <li>Created a unified CX vision, merged technical backlogs, and set up an insight‑sharing workflow.</li>
                         <li>Developed a phased blueprint for a single “Customer Zone” and kicked off implementation.</li>
                     </ul>
                 </div>
 
+                <!-- Spark / Readdle -->
                 <div class="job">
                     <div class="job-header">
                         <div>
                             <div class="job-title">PRODUCT MANAGER</div>
-                            <div class="company">Spark Mail App, Readdle</div>
+                            <div class="company">Spark Mail App, Readdle</div>
                         </div>
-                        <div class="period">2019 – 2024</div>
+                        <div class="period">2019 – 2024</div>
                     </div>
                     <ul class="achievements">
-                        <li>Participated in the desktop launch of Spark for Windows & macOS, driving multiple features; overall user base grew by ≈ 20 % after release.  </li>
-                        <li>Helped roll out subscription monetisation.</li>
+                        <li>Participated in the desktop launch of Spark for Windows &amp; macOS; overall user base grew by ≈ 20 % after release.</li>
+                        <li>Contributed to the rollout of subscription monetisation.</li>
                         <li>Systematised the design pipeline (backlog, planning, QA).</li>
-                        <li>Oversaw AI features (Smart Compose, tone/size rewrite).</li>
-                        <li>Built an automatic feedback-classification system to surface user insights.</li>
+                        <li>Oversaw AI features (Smart Compose, tone/size rewrite).</li>
+                        <li>Built an automatic feedback‑classification system to surface user insights.</li>
                     </ul>
                 </div>
 
+                <!-- Arounda -->
                 <div class="job">
                     <div class="job-header">
                         <div>
                             <div class="job-title">CHIEF OPERATING OFFICER</div>
                             <div class="company">Arounda Digital Product Agency</div>
                         </div>
-                        <div class="period">2017 – 2019</div>
+                        <div class="period">2017 – 2019</div>
                     </div>
                     <ul class="achievements">
-                        <li>Grew the agency from 4 to 20 employees; documented core business processes and introduced time-tracking.</li>
-                        <li>Took part in 37 client projects (sales, research, UX, product).</li>
-                        <li>Led product work for Velonto delivery startup; the project was later sold for ~ USD 1M.</li>
+                        <li>Grew the agency from 4 to 20 employees; documented core business processes and introduced time‑tracking.</li>
+                        <li>Took part in 37 client projects (sales, research, UX, product management).</li>
+                        <li>Led product work for Velonto delivery startup; the project was later sold for ~ USD 1 M.</li>
                     </ul>
                 </div>
 
+                <!-- Private Entrepreneur -->
                 <div class="job">
                     <div class="job-header">
                         <div>
-                            <div class="job-title">FOUNDER & DIRECTOR</div>
+                            <div class="job-title">FOUNDER &amp; DIRECTOR</div>
                             <div class="company">Private Entrepreneur</div>
                         </div>
-                        <div class="period">2014 – 2017</div>
+                        <div class="period">2014 – 2017</div>
                     </div>
                     <ul class="achievements">
-                        <li>Managed a 9-person team and delivered 11 web projects.</li>
+                        <li>Managed a 9‑person team and delivered 11 web projects (Socadvert.ru, Active‑Tour CRM &amp; travel site, Serial‑WOD event service).</li>
                     </ul>
                 </div>
 
+                <!-- Truepicker -->
                 <div class="job">
                     <div class="job-header">
                         <div>
-                            <div class="job-title">FOUNDER & DIRECTOR</div>
-                            <div class="company">"Truepicker" DotA 2 Fan Project</div>
+                            <div class="job-title">FOUNDER &amp; DIRECTOR</div>
+                            <div class="company">“Truepicker” DotA 2 Fan Project</div>
                         </div>
-                        <div class="period">2013 – 2016</div>
+                        <div class="period">2013 – 2016</div>
                     </div>
                     <ul class="achievements">
-                        <li>Ran a 6-person team; site became a top-2 DotA 2 resource in the CIS region.</li>
+                        <li>Ran a 6‑person team; site became a top‑2 DotA 2 resource in the CIS region.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="section">
-                <h2 class="section-title">Languages</h2>
-                <div class="languages">
-                    <div class="language">Ukrainian — Native</div>
-                    <div class="language">Russian — Native</div>
-                    <div class="language">English — Advanced</div>
-                </div>
-            </div>
-
+            <!-- References -->
             <div class="section">
                 <h2 class="section-title">References</h2>
                 <div class="references">
                     <div class="reference">
                         <div class="reference-name">Elena Obilets</div>
-                        <div class="reference-title">Product Lead, Spark Mail (Readdle)</div>
-                        <a href="https://www.linkedin.com/in/elenaobilets/" class="reference-link" target="_blank">LinkedIn Profile</a>
+                        <div class="reference-title">Product Lead, Spark Mail (Readdle)</div>
+                        <a class="reference-link" href="https://www.linkedin.com/in/elenaobilets/" target="_blank" rel="noopener">LinkedIn Profile</a>
                     </div>
                     <div class="reference">
                         <div class="reference-name">Andrii Popovych</div>
-                        <div class="reference-title">CPO, Tentens Tech</div>
-                        <a href="https://www.linkedin.com/in/andriipopovych/" class="reference-link" target="_blank">LinkedIn Profile</a>
+                        <div class="reference-title">CPO, Tentens Tech</div>
+                        <a class="reference-link" href="https://www.linkedin.com/in/andriipopovych/" target="_blank" rel="noopener">LinkedIn Profile</a>
                     </div>
                 </div>
             </div>
